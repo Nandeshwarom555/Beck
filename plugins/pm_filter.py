@@ -639,7 +639,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('‼️ ʜᴇʟᴘ ‼️', callback_data='help'),
             InlineKeyboardButton('♻️ ᴀʙᴏᴜᴛ ♻️', callback_data='about')
             ],[
-            InlineKeyboardButton('⚡️ ʙᴜʏ ᴀɴʏ ᴍᴏᴠɪᴇ ᴀᴛ ʀꜱ.10 ⚡️', url='https://www.youtube.com/@CinematoBugTV')
+            InlineKeyboardButton('⚡️ ʙᴜʏ ᴀɴʏ ᴍᴏᴠɪᴇ ᴀᴛ ʀꜱ.10 ⚡️', url='https://t.me/Movies_Rs_10')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await client.edit_message_media(
