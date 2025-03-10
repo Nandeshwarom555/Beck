@@ -60,8 +60,6 @@ async def save_group(bot, message):
                                                  reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('➡️ɢʀᴏᴜᴘ ʀᴜʟᴇs⬅️', url='https://t.me/cinematobug_bot?start=rules_-1001820559841') ] ] ))
                 except pyrogram.errors.ChatWriteForbidden:
                     print("Bot does not have permission to send messages in this chat.")
-
-                )
                 
         if settings["auto_delete"]:
             await asyncio.sleep(600)
