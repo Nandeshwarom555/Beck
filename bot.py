@@ -1,5 +1,7 @@
 import logging
 import logging.config
+import subprocess
+import time
 from pyrogram import Client, __version__, filters
 from pyrogram.raw.all import layer
 from database.ia_filterdb import Media
@@ -78,4 +80,9 @@ class Bot(Client):
 
 if __name__ == "__main__":
     app = Bot()
-    app.run()
+    while True:
+    try:
+        app.run()  # Start the bot
+    except Exception as e:
+        print(f"Bot crashed with error: {e}")
+        time.sleep(5)  # Wait before restarting
