@@ -1304,7 +1304,10 @@ async def auto_filter(client, msg, spoll=False):
                     if settings['auto_delete']:
                         await asyncio.sleep(600)
                         await hehe.delete()
-                        await message.delete()
+                        try:
+                            await message.delete()
+                        except pyrogram.errors.exceptions.forbidden_403.MessageDeleteForbidden:
+                            print("Bot lacks permission to delete this message.")
                 except KeyError:
                     grpid = await active_connection(str(message.from_user.id))
                     await save_group_settings(grpid, 'auto_delete', True)
@@ -1343,7 +1346,10 @@ async def auto_filter(client, msg, spoll=False):
                     if settings['auto_delete']:
                         await asyncio.sleep(600)
                         await fek.delete()
-                        await message.delete()
+                        try:
+                            await message.delete()
+                        except pyrogram.errors.exceptions.forbidden_403.MessageDeleteForbidden:
+                            print("Bot lacks permission to delete this message.")
                 except KeyError:
                     grpid = await active_connection(str(message.from_user.id))
                     await save_group_settings(grpid, 'auto_delete', True)
