@@ -81,8 +81,8 @@ class Bot(Client):
 if __name__ == "__main__":
     app = Bot()
     while True:
-    try:
-        app.run()  # Start the bot
-    except Exception as e:
-        print(f"Bot crashed with error: {e}")
-        time.sleep(5)  # Wait before restarting
+        try:
+            app.run()  # Start the bot
+        except Exception as e:
+            print(f"Bot crashed with error: {e}")
+            time.sleep(5)  # Wait before restarting
