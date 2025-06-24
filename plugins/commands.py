@@ -64,7 +64,7 @@ async def start(client, message):
         btn = [
             [
                 InlineKeyboardButton(
-                    "ꜱᴜʙꜱᴄʀɪʙᴇ", url='https://www.youtube.com/@CinematoBugTV')
+                    "ꜱᴜʙꜱᴄʀɪʙᴇ", url='https://www.youtube.com/channel/UChu9EsXLX7OhgD9PKVGI4Aw?sub_confirmation=1')
             ],[
                 InlineKeyboardButton(
                     "ᴊᴏɪɴ ɢʀᴏᴜᴘ", url=invite_link.invite_link
